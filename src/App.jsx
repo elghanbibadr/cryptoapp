@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Navbar from './componenet/Navbar'
 const App = () => {
   return (
-    <h1 className='text-red-800'>App</h1>
+    <div className='max-w-[1100px] mt-6 mx-auto'>
+    <Navbar/>
+    </div>
   )
 }
 
