@@ -17,7 +17,7 @@ const Navbar = () => {
      <div>
     {!auth.currentUser.email && <>
         <Link to="/signUp">
-     <Btn text="Sign Up" className="bg-blue-400 text-white" />
+     <Btn text="Sign Up" className="bg-blue-400 bg-primary text-white" />
      </Link> 
        <Btn text="Sign In" />
     </>  
