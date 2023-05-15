@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { auth } from '../firebase';
 
 const SignUp = () => {
     const styles={
@@ -32,6 +33,7 @@ const SignUp = () => {
              placeholder='password'
              onChange={handlePasswordChange} />
         </div>
+        <button className='text-white bg-blue-400 w-full py-2 rounded-md font-bold '>Sign in</button>
     </form>
    </div>
   )
