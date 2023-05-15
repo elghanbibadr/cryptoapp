@@ -2,6 +2,7 @@ import React from 'react'
 import Wrraper from './Wrraper'
 import Btn from './Btn'
 import { Link } from 'react-router-dom'
+import { auth } from '../firebase'
 import MoonIcon from "../../src/moon-solid.svg"
 const Navbar = () => {
     return(
@@ -14,10 +15,16 @@ const Navbar = () => {
     </div>
     {/* sign in and sign up */}
      <div>
-     <Btn text="Sign In" />
-     <Link to="/signUp">
-     <Btn text="Sign Up" className="bg-blue-500 text-white" />
-     </Link>
+    {!auth.currentUser.email && <>
+        <Link to="/signUp">
+     <Btn text="Sign Up" className="bg-blue-400 text-white" />
+     </Link> 
+       <Btn text="Sign In" />
+    </>  
+     }
+     {auth.currentUser.email && <button>sign out</button>}
+     {auth.currentUser.email && <button className='mx-4'>account</button>}
+   
      </div>
     </nav>
    </Wrraper>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { auth } from '../firebase';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const SignUp = () => {
     const styles={
@@ -10,11 +11,17 @@ const SignUp = () => {
 
     const handleEmailChange=(e)=>setEmail(e.target.value)
     const handlePasswordChange=(e)=>setPassword(e.target.value)
+    const handleSignUp = async (e) => {
+       e.preventDefault()
+       await createUserWithEmailAndPassword(auth, email, password)
+       setEmail('')
+       setPassword('')
+      };
 
   return (
     <div className='mx-auto w-[30%]'>
         <h2 className='font-bold text-lg my-10'>Sign up</h2>
-    <form>
+    <form onSubmit={handleSignUp} >
         <div className='flex flex-col'>
             <label className=''  htmlFor='email'>Email</label>
             <input id="email"
@@ -33,7 +40,7 @@ const SignUp = () => {
              placeholder='password'
              onChange={handlePasswordChange} />
         </div>
-        <button className='text-white bg-blue-400 w-full py-2 rounded-md font-bold '>Sign in</button>
+        <button className='text-white bg-blue-400 w-full py-2 rounded-md font-bold '>Sign up</button>
     </form>
    </div>
   )
