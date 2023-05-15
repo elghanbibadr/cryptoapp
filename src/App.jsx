@@ -7,9 +7,11 @@ const App = () => {
   return (
     <div className='max-w-[1100px] mt-6 mx-auto'>
     <Navbar/>
+    <main className='mt-20'>
     <Routes>
       <Route path='/signUp' element={<SignUp />} />
     </Routes>
+    </main>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Wrraper from './Wrraper'
 import Btn from './Btn'
+import { Link } from 'react-router-dom'
 import MoonIcon from "../../src/moon-solid.svg"
 const Navbar = () => {
     return(
@@ -14,7 +15,9 @@ const Navbar = () => {
     {/* sign in and sign up */}
      <div>
      <Btn text="Sign In" />
+     <Link to="/signUp">
      <Btn text="Sign Up" className="bg-blue-500 text-white" />
+     </Link>
      </div>
     </nav>
    </Wrraper>
