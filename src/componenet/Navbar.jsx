@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import { auth } from '../firebase'
 import MoonIcon from "../../src/moon-solid.svg"
 const Navbar = () => {
+    // {console.log(auth.currentUser.email)}
     return(
    <Wrraper >
     <nav className='flex  justify-between items-center'>
@@ -15,16 +16,18 @@ const Navbar = () => {
     </div>
     {/* sign in and sign up */}
      <div>
-    {!auth.currentUser.email && <>
+    {!auth?.currentUser?.email &&  <>
         <Link to="/signUp">
-     <Btn text="Sign Up" className="bg-blue-400 bg-primary text-white" />
+     <Btn text="Sign Up" className="bg-blue-400  text-white" />
      </Link> 
        <Btn text="Sign In" />
     </>  
      }
-     {auth.currentUser.email && <button>sign out</button>}
-     {auth.currentUser.email && <button className='mx-4'>account</button>}
-   
+
+     {auth?.currentUser?.email && <>
+        <button>sign out</button>
+     <button className='mx-4'>account</button>
+     </>}
      </div>
     </nav>
    </Wrraper>
