@@ -4,10 +4,13 @@ import Btn from './Btn'
 import { Link } from 'react-router-dom'
 import { auth } from '../firebase'
 import MoonIcon from "../../src/moon-solid.svg"
+
+
 const Navbar = () => {
-    // {console.log(auth.currentUser.email)}
+
     return(
-   <Wrraper >
+
+<Wrraper >
     <nav className='flex  justify-between items-center'>
     <h1 className='text-2xl font-bold'>Cryptobase</h1>
     <div className='flex'>
@@ -24,7 +27,7 @@ const Navbar = () => {
     </>  
      }
 
-     {auth?.currentUser?.email && <>
+     {auth.currentUser.email && <>
         <button>sign out</button>
      <button className='mx-4'>account</button>
      </>}
