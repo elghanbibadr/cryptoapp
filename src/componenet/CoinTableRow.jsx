@@ -3,7 +3,6 @@ import starIcon from "../assets/star-regular.svg"
 
 
 const CoinTableRow = (props) => {
-    const [priceChangeNegative, setPriceChangeNegative] = useState(undefined)
    
     return (
         <tr className='text-center p-10 '>
@@ -16,7 +15,7 @@ const CoinTableRow = (props) => {
                 <span className='ml-10'>{props.symbol}</span>
             </td>
             <td>${props.current_price}</td>
-            <td className={`${priceChangeNegative ? 'text-[red]' : 'text-[green]'}`}>${Number(props.price_change_percentage_24h) < 0 ? setPriceChangeNegative(true) : setPriceChangeNegative(false)}</td>
+            <td className={`${Number(props.price_change_percentage_24h) <0 ? 'text-[red]' : 'text-[green]'}`}>${props.price_change_percentage_24h}</td>
             <td>${props.total_volume}</td>
             <td>${props.market_cap}</td>
             <td>$100</td>
