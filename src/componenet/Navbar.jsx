@@ -19,7 +19,7 @@ const Navbar = () => {
     </div>
     {/* sign in and sign up */}
      <div>
-    {!auth?.currentUser?.email &&  <>
+    {  <>
         <Link to="/signUp">
      <Btn text="Sign Up" className="bg-blue-400  text-white" />
      </Link> 
@@ -27,11 +27,11 @@ const Navbar = () => {
     </>  
      }
 
-     {auth.currentUser.email && <>
+      {/* { <>
         <button>sign out</button>
      <button className='mx-4'>account</button>
-     </>}
-     </div>
+     </>} */}
+ </div> 
     </nav>
    </Wrraper>
     )
