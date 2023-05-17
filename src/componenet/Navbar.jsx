@@ -3,11 +3,13 @@ import Wrraper from './Wrraper'
 import Btn from './Btn'
 import { Link } from 'react-router-dom'
 import { auth } from '../firebase'
-import MoonIcon from "../../src/moon-solid.svg"
+import MoonIcon from "../assets/moon-solid.svg"
+
+
+
 
 
 const Navbar = () => {
-
     return(
 
 <Wrraper >
