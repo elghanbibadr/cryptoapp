@@ -18,9 +18,9 @@ export const CoinsTable = () => {
 
 
   return (
-    <table className='w-full'>
+    <table className='w-full '>
         {/* the table header  */}
-    <tr className=' w-full '>
+    <tr className='bg-black my-20 w-full  m-[2rem]'>
       <th></th>
       <th className='text-end'>#</th>
       <th>coin</th>
