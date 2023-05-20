@@ -22,8 +22,8 @@ export const CoinsTable = () => {
  {console.log(data)}
 
     {/* table data row */}
-   { data.map(({id,market_cap_rank,image,name,symbol,current_price,price_change_percentage_24h,total_volume,market_cap}) => {
-    return <CoinTableRow key={id} market_cap_rank={market_cap_rank} image={image} name={name} symbol={symbol} current_price={current_price} price_change_percentage_24h={price_change_percentage_24h} total_volume={total_volume} market_cap={market_cap} />
+   { data.map(({id,market_cap_rank,image,name,symbol,sparkline,current_price,price_change_percentage_24h,total_volume,market_cap}) => {
+    return <CoinTableRow key={id} market_cap_rank={market_cap_rank} sparkline={sparkline} image={image} name={name} symbol={symbol} current_price={current_price} price_change_percentage_24h={price_change_percentage_24h} total_volume={total_volume} market_cap={market_cap} />
    })}
     
   </table>

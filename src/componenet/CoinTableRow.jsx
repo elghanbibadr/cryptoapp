@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import starIcon from "../assets/star-regular.svg"
-
+import { Sparklines,SparklinesLine } from 'react-sparklines'
 
 const CoinTableRow = (props) => {
    
@@ -20,7 +20,11 @@ const CoinTableRow = (props) => {
             <td className={`${Number(props.price_change_percentage_24h) <0 ? 'text-[red]' : 'text-[green]'}`}>${props.price_change_percentage_24h}</td>
             <td>${props.total_volume}</td>
             <td>${props.market_cap}</td>
-            <td>$</td>
+            <td>
+                <Sparklines data={props.sparkline}>
+                    <SparklinesLine color='teal' />
+                </Sparklines>
+            </td>
         </tr>
     )
 }

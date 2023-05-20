@@ -53,7 +53,7 @@ export const data=[
         "atl": 0.432979,
         "atl_change_percentage": 415130.42504,
         "atl_date": "2015-10-20T00:00:00.000Z",
-        "sparkline":[100,790,90,61,29],
+        "sparkline":[10,22,16,1,29],
         "roi": {
             "times": 88.69973864949924,
             "currency": "btc",
@@ -86,7 +86,7 @@ export const data=[
         "atl": 0.572521,
         "atl_change_percentage": 74.76199,
         "atl_date": "2015-03-02T00:00:00.000Z",
-        "sparkline":[100,790,90,61,39],
+        "sparkline":[10,90,900,61,39],
         "roi": null,
         "last_updated": "2023-05-17T15:45:01.002Z"
     },
@@ -115,7 +115,7 @@ export const data=[
         "atl": 0.0398177,
         "atl_change_percentage": 775726.57922,
         "atl_date": "2017-10-19T00:00:00.000Z",
-        "sparkline":[100,790,90,61,89],
+        "sparkline":[10,7,9,61,89],
 
         "roi": null,
         "last_updated": "2023-05-17T15:46:06.176Z"
@@ -146,7 +146,7 @@ export const data=[
         "atl_change_percentage": 14.06781,
         "atl_date": "2023-03-11T08:02:13.981Z",
         "roi": null,
-        "sparkline":[100,790,90,61,29],
+        "sparkline":[1,7090,10,11,29],
 
         "last_updated": "2023-05-17T15:46:01.940Z"
     },
@@ -176,7 +176,7 @@ export const data=[
         "atl_change_percentage": 16339.87827,
         "atl_date": "2014-05-22T00:00:00.000Z",
         "roi": null,
-        "sparkline":[100,790,90,1,29],
+        "sparkline":[1,7,10,1,9],
 
         "last_updated": "2023-05-17T15:46:07.012Z"
     },
@@ -206,7 +206,7 @@ export const data=[
         "atl_change_percentage": 1808.20949,
         "atl_date": "2020-03-13T02:22:55.044Z",
         "roi": null,
-        "sparkline":[100,790,90,61,29],
+        "sparkline":[88,990,900,1,9],
         "last_updated": "2023-05-17T15:45:58.284Z"
     },
     {
@@ -235,7 +235,7 @@ export const data=[
         "atl_change_percentage": 272.15599,
         "atl_date": "2020-12-22T04:08:21.854Z",
         "roi": null,
-        "sparkline":[100,790,90,61,29],
+        "sparkline":[100,70,9,61,29],
         "last_updated": "2023-05-17T15:45:42.377Z"
     },
     {
@@ -264,7 +264,7 @@ export const data=[
         "atl_change_percentage": 84351.06867,
         "atl_date": "2015-05-06T00:00:00.000Z",
         "roi": null,
-        "sparkline":[100,790,90,61,99],
+        "sparkline":[1000,7,900,1,999],
         "last_updated": "2023-05-17T15:46:02.290Z"
     },
     {
@@ -296,38 +296,7 @@ export const data=[
         "roi": null,
         "last_updated": "2023-05-17T15:46:01.260Z"
     },
-    {
-        "id": "matic-network",
-        "symbol": "matic",
-        "name": "Polygon",
-        "image": "https://assets.coingecko.com/coins/images/4713/large/matic-token-icon.png?1624446912",
-        "current_price": 0.852595,
-        "market_cap": 7928874882,
-        "market_cap_rank": 11,
-        "fully_diluted_valuation": 8544535062,
-        "total_volume": 256596431,
-        "high_24h": 0.865114,
-        "low_24h": 0.836819,
-        "price_change_24h": 0.01287687,
-        "price_change_percentage_24h": 1.53348,
-        "market_cap_change_24h": 162515782,
-        "market_cap_change_percentage_24h": 2.09256,
-        "circulating_supply": 9279469069.28493,
-        "total_supply": 10000000000.0,
-        "max_supply": 10000000000.0,
-        "ath": 2.92,
-        "ath_change_percentage": -70.67173,
-        "ath_date": "2021-12-27T02:08:34.307Z",
-        "atl": 0.00314376,
-        "atl_change_percentage": 27105.94061,
-        "atl_date": "2019-05-10T00:00:00.000Z",
-        "roi": {
-            "times": 323.18051679849157,
-            "currency": "usd",
-            "percentage": 32318.051679849155
-        },
-        "last_updated": "2023-05-17T15:46:05.546Z"
-    },
+    
     {
         "id": "litecoin",
         "symbol": "ltc",
@@ -505,7 +474,7 @@ export const data=[
         "atl_change_percentage": 425.1755,
         "atl_date": "2020-12-31T13:15:21.540Z",
         "roi": null,
-        "sparkline":[100,790,90,61,9],
+        "sparkline":[10,20,9,61,9],
         "last_updated": "2023-05-17T15:46:04.433Z"
     },
     {
@@ -534,7 +503,7 @@ export const data=[
         "atl_change_percentage": 13.50141,
         "atl_date": "2023-03-11T07:50:50.514Z",
         "roi": null,
-        "sparkline":[100,790,90,61,10],
+        "sparkline":[1,90,90,61,10],
         "last_updated": "2023-05-17T15:45:00.627Z"
     },
     {
@@ -563,7 +532,7 @@ export const data=[
         "atl_change_percentage": 753.62283,
         "atl_date": "2019-04-02T00:00:00.000Z",
         "roi": null,
-        "sparkline":[100,790,90,61,9],
+        "sparkline":[1000,790,90,61,9],
         "last_updated": "2023-05-17T15:46:06.980Z"
     },
     {
@@ -592,7 +561,7 @@ export const data=[
         "atl_change_percentage": 398.62099,
         "atl_date": "2020-09-17T01:20:38.214Z",
         "roi": null,
-        "sparkline":[100,790,90,61,9],
+        "sparkline":[1,1,9,61,9],
         "last_updated": "2023-05-17T15:46:06.346Z"
     },
     {
