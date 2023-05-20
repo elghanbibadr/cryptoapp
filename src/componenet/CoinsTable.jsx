@@ -44,9 +44,9 @@ filterCoins()
             <th>coin</th>
             <th>price</th>
             <th>24h</th>
-            <th>24h Volume</th>
-            <th>mkt</th>
-            <th>last 7 Days</th>
+            <th className='hidden  lg:table-cell'>24h Volume</th>
+            <th className='hidden  lg:table-cell'>mkt</th>
+            <th className='hidden  lg:table-cell'>last 7 Days</th>
           </tr>
         </thead>
         <tbody>

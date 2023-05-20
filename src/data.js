@@ -212,7 +212,7 @@ export const data=[
     {
         "id": "staked-ether",
         "symbol": "steth",
-        "name": "Lido Staked Ether",
+        "name": "Staked Ether",
         "image": "https://assets.coingecko.com/coins/images/13442/large/steth_logo.png?1608607546",
         "current_price": 1796.99,
         "market_cap": 11333977183,
