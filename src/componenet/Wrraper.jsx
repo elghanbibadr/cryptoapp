@@ -2,9 +2,9 @@ import React from 'react'
 
 
 // a wrapper componenet for each section
-const Wrraper = ({children}) => {
+const Wrraper = ({children,props}) => {
   return (
-    <div className='bg-white shadow-xl p-4 rounded-md'>{children}</div>
+    <div className={ `bg-white shadow-xl  p-3  rounded-md` }>{children}</div>
   )
 }
 
