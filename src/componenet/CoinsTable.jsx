@@ -17,8 +17,7 @@ const filterCoins= () => {
   setCoins(filteredData)
 } 
 
-console.log(coins)
-console.log(data)
+
 
 useEffect(()=>
 filterCoins()
@@ -56,6 +55,7 @@ filterCoins()
           })}
         </tbody>
       </table>
+       {coins.length===0 && <p className='flex justify-center my-6'>no coins found</p>}
     </Wrraper>
   )
 }
