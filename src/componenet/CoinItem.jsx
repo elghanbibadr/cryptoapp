@@ -9,7 +9,7 @@ const CoinItem = (props) => {
 
             <td className='w-[14px] h-[14px]' ><img className='h-full w-full' src={starIcon} alt="star icon" /> </td>
             <td className='text-end'>{props.market_cap_rank}</td>
-            <td className='flex flex-col  self-center mt-6 items-center ' >
+            <td className='flex flex-col  self-center mt-6 items-center md:flex-row md:justify-around ' >
                 <div>
                     <img className='h-5 w-5 inline' src={props.image} alt="coin image" />
                     <span> {props.name}</span>
