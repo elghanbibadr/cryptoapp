@@ -25,7 +25,8 @@ export const data=[
         "atl_change_percentage": 39411.39605,
         "atl_date": "2013-07-06T00:00:00.000Z",
         "roi": null,
-        "last_updated": "2023-05-17T15:46:06.962Z"
+        "last_updated": "2023-05-17T15:46:06.962Z",
+        "sparkline":[100,790,90,61,19],
     },
     {
         "id": "ethereum",
@@ -52,6 +53,7 @@ export const data=[
         "atl": 0.432979,
         "atl_change_percentage": 415130.42504,
         "atl_date": "2015-10-20T00:00:00.000Z",
+        "sparkline":[100,790,90,61,29],
         "roi": {
             "times": 88.69973864949924,
             "currency": "btc",
@@ -84,6 +86,7 @@ export const data=[
         "atl": 0.572521,
         "atl_change_percentage": 74.76199,
         "atl_date": "2015-03-02T00:00:00.000Z",
+        "sparkline":[100,790,90,61,39],
         "roi": null,
         "last_updated": "2023-05-17T15:45:01.002Z"
     },
@@ -112,6 +115,8 @@ export const data=[
         "atl": 0.0398177,
         "atl_change_percentage": 775726.57922,
         "atl_date": "2017-10-19T00:00:00.000Z",
+        "sparkline":[100,790,90,61,89],
+
         "roi": null,
         "last_updated": "2023-05-17T15:46:06.176Z"
     },
@@ -141,6 +146,8 @@ export const data=[
         "atl_change_percentage": 14.06781,
         "atl_date": "2023-03-11T08:02:13.981Z",
         "roi": null,
+        "sparkline":[100,790,90,61,29],
+
         "last_updated": "2023-05-17T15:46:01.940Z"
     },
     {
@@ -169,6 +176,8 @@ export const data=[
         "atl_change_percentage": 16339.87827,
         "atl_date": "2014-05-22T00:00:00.000Z",
         "roi": null,
+        "sparkline":[100,790,90,1,29],
+
         "last_updated": "2023-05-17T15:46:07.012Z"
     },
     {
@@ -197,6 +206,7 @@ export const data=[
         "atl_change_percentage": 1808.20949,
         "atl_date": "2020-03-13T02:22:55.044Z",
         "roi": null,
+        "sparkline":[100,790,90,61,29],
         "last_updated": "2023-05-17T15:45:58.284Z"
     },
     {
@@ -225,6 +235,7 @@ export const data=[
         "atl_change_percentage": 272.15599,
         "atl_date": "2020-12-22T04:08:21.854Z",
         "roi": null,
+        "sparkline":[100,790,90,61,29],
         "last_updated": "2023-05-17T15:45:42.377Z"
     },
     {
@@ -253,6 +264,7 @@ export const data=[
         "atl_change_percentage": 84351.06867,
         "atl_date": "2015-05-06T00:00:00.000Z",
         "roi": null,
+        "sparkline":[100,790,90,61,99],
         "last_updated": "2023-05-17T15:46:02.290Z"
     },
     {
@@ -274,6 +286,7 @@ export const data=[
         "circulating_supply": 395803443.246446,
         "total_supply": 547942841.633947,
         "max_supply": null,
+        "sparkline":[100,790,90,61,99],
         "ath": 259.96,
         "ath_change_percentage": -92.08243,
         "ath_date": "2021-11-06T21:54:35.825Z",
@@ -341,6 +354,8 @@ export const data=[
         "atl_change_percentage": 7920.6887,
         "atl_date": "2015-01-14T00:00:00.000Z",
         "roi": null,
+        "sparkline":[100,90,90,61,19],
+
         "last_updated": "2023-05-17T15:46:04.637Z"
     },
     {
@@ -369,6 +384,8 @@ export const data=[
         "atl_change_percentage": 95.06452,
         "atl_date": "2020-08-20T05:48:11.359Z",
         "roi": null,
+        "sparkline":[10,79,90,1,9],
+
         "last_updated": "2023-05-17T15:46:00.743Z"
     },
     {
@@ -401,6 +418,7 @@ export const data=[
             "currency": "usd",
             "percentage": 3604.451411550128
         },
+        "sparkline":[100,790,90,1,40],
         "last_updated": "2023-05-17T15:46:04.673Z"
     },
     {
@@ -429,6 +447,7 @@ export const data=[
         "atl_change_percentage": 10.96476,
         "atl_date": "2021-05-19T13:04:37.445Z",
         "roi": null,
+        "sparkline":[50,70,90,61,9],
         "last_updated": "2023-05-17T15:45:58.657Z"
     },
     {
@@ -457,6 +476,7 @@ export const data=[
         "atl_change_percentage": 15353767.68353,
         "atl_date": "2020-11-28T11:26:25.838Z",
         "roi": null,
+        "sparkline":[100,80,90,61,9],
         "last_updated": "2023-05-17T15:45:58.273Z"
     },
     {
@@ -485,6 +505,7 @@ export const data=[
         "atl_change_percentage": 425.1755,
         "atl_date": "2020-12-31T13:15:21.540Z",
         "roi": null,
+        "sparkline":[100,790,90,61,9],
         "last_updated": "2023-05-17T15:46:04.433Z"
     },
     {
@@ -513,6 +534,7 @@ export const data=[
         "atl_change_percentage": 13.50141,
         "atl_date": "2023-03-11T07:50:50.514Z",
         "roi": null,
+        "sparkline":[100,790,90,61,10],
         "last_updated": "2023-05-17T15:45:00.627Z"
     },
     {
@@ -541,6 +563,7 @@ export const data=[
         "atl_change_percentage": 753.62283,
         "atl_date": "2019-04-02T00:00:00.000Z",
         "roi": null,
+        "sparkline":[100,790,90,61,9],
         "last_updated": "2023-05-17T15:46:06.980Z"
     },
     {
@@ -569,6 +592,7 @@ export const data=[
         "atl_change_percentage": 398.62099,
         "atl_date": "2020-09-17T01:20:38.214Z",
         "roi": null,
+        "sparkline":[100,790,90,61,9],
         "last_updated": "2023-05-17T15:46:06.346Z"
     },
     {
@@ -597,6 +621,7 @@ export const data=[
         "atl_change_percentage": 4359.44329,
         "atl_date": "2017-11-29T00:00:00.000Z",
         "roi": null,
+        "sparkline":[100,790,90,61,9],
         "last_updated": "2023-05-17T15:46:00.920Z"
     },
     {
@@ -625,5 +650,6 @@ export const data=[
         "atl_change_percentage": 346.92711,
         "atl_date": "2019-12-24T15:14:35.376Z",
         "roi": null,
+        "sparkline":[10,90,10,61,9],
         "last_updated": "2023-05-17T15:45:59.598Z"
 }]
