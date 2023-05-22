@@ -28,7 +28,7 @@ const CoinDetail = () => {
             </div>
             {/* column */}
             <div>
-                {/* <h3 className='font-bold mb-6'>Market stats</h3> */}
+                <h3 className='font-bold mb-6'>Market stats</h3>
                 <p className='my-3 text-sm'>Market Rank</p>
                 <span>{market_cap_rank}</span>
             </div>
