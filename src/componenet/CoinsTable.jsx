@@ -51,7 +51,7 @@ filterCoins()
         </thead>
         <tbody>
           {coins.map(({ id, market_cap_rank, image, name, symbol, sparkline, current_price, price_change_percentage_24h, total_volume, market_cap }) => {
-            return <CoinItem key={id} market_cap_rank={market_cap_rank} sparkline={sparkline} image={image} name={name} symbol={symbol} current_price={current_price} price_change_percentage_24h={price_change_percentage_24h} total_volume={total_volume} market_cap={market_cap} />
+            return <CoinItem key={id} id={id} market_cap_rank={market_cap_rank} sparkline={sparkline} image={image} name={name} symbol={symbol} current_price={current_price} price_change_percentage_24h={price_change_percentage_24h} total_volume={total_volume} market_cap={market_cap} />
           })}
         </tbody>
       </table>
