@@ -14,7 +14,7 @@ const Navbar = () => {
 
 <Wrraper >
     <nav className='flex  justify-between items-center'>
-    <h1 className='text-2xl font-bold'>Cryptobase</h1>
+    <h2 className='text-black text-xl mb-8 font-bold'>Cryptobase</h2>
     <div className='flex'>
      <img className='h-6 mx-3' src={MoonIcon} alt="moon icon" /> 
     <h4>Dark Mode</h4>
