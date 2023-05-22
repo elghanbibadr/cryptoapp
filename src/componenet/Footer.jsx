@@ -13,7 +13,7 @@ const Footer = () => {
     }
 
     return (
-        <Wrraper className='mt-20'>
+        <Wrraper className='mt-20 p-3'>
             <div className='flex justify-between'>
                 <div className='flex '>
                     <ul className='uppercase mr-10'>
@@ -43,6 +43,7 @@ const Footer = () => {
                     </form>
                 </div>
             </div>
+            <p className='text-center mt-5'>Powered by Coin Gecko</p>
         </Wrraper>
     )
 }
