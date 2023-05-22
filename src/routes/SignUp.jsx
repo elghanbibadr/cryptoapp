@@ -17,13 +17,13 @@ const SignUp = () => {
         setEmail('')
         setPassword('')
     };
-{console.log(auth.currentUser.email)}
+
     return (
         <div className='mx-auto w-[30%]'>
             <h2 className='font-bold text-lg my-10'>Sign up</h2>
             <form onSubmit={handleSignUp} >
                 <div className='flex flex-col'>
-                    <label className='' htmlFor='email'>Email</label>
+                    <label  htmlFor='email'>Email</label>
                     <input id="email"
                         className={styles.input}
                         type='email'
