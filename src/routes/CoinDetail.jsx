@@ -19,7 +19,7 @@ const CoinDetail = () => {
             {/* column */}
             <div className='col-span-3 row-span-2'>
                 <div className='flex justify-between'>
-                    <h2  className='font-bold text-2xl mr-6'>$ {high_24h}</h2>
+                    <h2  className='font-bold text-2xl mr-6'>$ {high_24h.toFixed(3)}</h2>
                     <p className=' font-medium'>7 Days</p>
                 </div>
                 <Sparklines  data={sparkline}> 
