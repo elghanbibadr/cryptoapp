@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { auth } from '../firebase';
+import { auth ,db} from '../firebase';
+import {setDoc,doc} from "firebase/firestore"
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const SignUp = () => {
@@ -11,9 +12,13 @@ const SignUp = () => {
 
     const handleEmailChange = (e) => setEmail(e.target.value)
     const handlePasswordChange = (e) => setPassword(e.target.value)
-    const handleSignUp = async (e) => {
+    const handleSignUp =  (e) => {
         e.preventDefault()
-        await createUserWithEmailAndPassword(auth, email, password)
+         createUserWithEmailAndPassword(auth, email, password)
+         setDoc(doc(db,'users',email), {
+            watchList:[],
+         })
+         setDoc
         setEmail('')
         setPassword('')
     };
