@@ -6,9 +6,11 @@ import Footer from './componenet/Footer'
 import CoinDetail from './routes/CoinDetail'
 import Home from './routes/Home'
 import Acount from './routes/Acount'
+import { AuthContextProvider } from './context/AuthContext'
 
 const App = () => {
   return (
+    <AuthContextProvider>
     <div className='max-w-[1100px] mt-6 mx-auto'>
     <Navbar/>
     <main className='mt-20'>
@@ -22,6 +24,7 @@ const App = () => {
     </main>
     <Footer/>
     </div>
+    </AuthContextProvider>
   )
 }
 
