@@ -5,14 +5,16 @@ import { UserAuth } from '../context/AuthContext'
 
 const Acount = () => {
   const  {user} =UserAuth()
-  console.log(user)
+  console.log(user.email)
   return (
     <Wrraper>
-      <div>
-        <h2 className='font-bold'>Account</h2>
-        <p>Welcome</p>
+      <div className='flex justify-between items-center p-3'>
+        <div>
+          <h2 className='font-bold'>Account</h2>
+          <p className='mt-4'>Welcome {user.email}</p>
+        </div>
+             <Btn text="Sign out"  className="bg-white shadow-md" />
       </div>
-     <Btn text="Sign out"  className="bg-white shadow-md" />
     </Wrraper>
   )
 }
