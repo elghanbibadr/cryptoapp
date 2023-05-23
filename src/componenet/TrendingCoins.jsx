@@ -8,7 +8,7 @@ const TrendingCoins = () => {
       <h2 className='text-black text-xl mb-20 font-bold'>TrendingCoins</h2>
       <div className='grid grid-cols-3'>
         {data.slice(3, 8).map(({ id, name, symbol, image, high_24h }) => {
-    return <Link to={`/coin/${id}`} >
+    return <Link key={id} to={`/coin/${id}`} >
             <Wrraper className="m-2 flex justify-between items-center" key={id}>
               <div className='flex '>
                 <img className='h-10 w-10 mr-6 ' src={image} alt="coin image" />

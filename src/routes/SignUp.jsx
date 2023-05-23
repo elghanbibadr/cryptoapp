@@ -25,9 +25,11 @@ const SignUp = () => {
          await signUp(email,password)
          navigate('/account')
         }catch(e){
+            console.log(e.message)
             setError(e.message)
         }
     }
+    console.log(error)
 
     return (
         <div className='mx-auto w-[30%]'>

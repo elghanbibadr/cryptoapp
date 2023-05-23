@@ -1,9 +1,32 @@
 import React, { useState } from 'react'
 import starIcon from "../assets/star-regular.svg"
 import { Link } from 'react-router-dom'
-import { Sparklines, SparklinesLine } from 'react-sparklines'
+import { arrayUnion, updateDoc ,doc} from 'firebase/firestore'
+import { db } from '../firebase'
+import { Sparklines, SparklinesLine  } from 'react-sparklines'
+import { UserAuth } from '../context/AuthContext'
 
 const CoinItem = (props) => {
+    const {user} =UserAuth()
+    const [savedCoin,setSavedCoin] =useState(false) 
+    const coinPath=doc(db,'users',`${user?.email}`);
+
+  const saveCoin= async () => {
+    if (user?.email){
+     setSavedCoin(true)
+     await updateDoc(coinPath,{
+        watchList :arrayUnion({
+            id:coin.id,
+            name:coin.name,
+            image:coin.image,
+            rank:coin.market_cap_rank,
+            symbol:coin.symbol, 
+        })
+     })
+    }else{
+        alert("please sign in to save a coin to your watch list")
+    }
+  }
 
     return (
         <tr className='text-center border-t-[1px] border-[#ccc] font-medium h-[75px] p-10 '>

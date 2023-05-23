@@ -11,7 +11,9 @@ import MoonIcon from "../assets/moon-solid.svg"
 
 
 const Navbar = () => {
-    const {user} =UserAuth();
+    const {user,logout} =UserAuth();
+    const handleSignOut=() => logout();
+
     return(
 
 <Wrraper >
@@ -36,7 +38,7 @@ const Navbar = () => {
      }
  
       {user?.email  &&  <>
-        <button>sign out</button>
+        <button onClick={handleSignOut}>sign out</button>
      <Link to="/account">
      <button className='mx-4'>account</button>
      </Link>

@@ -4,11 +4,11 @@ import Btn from '../componenet/Btn'
 import { UserAuth } from '../context/AuthContext'
 
 const SignIn = () => {
-  const {signIn,user}=UserAuth()
+  const {signIn}=UserAuth()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error,setError]=useState('') ;
-console.log(email)
+  const [error,setError]=useState('');
+
     const handleSubmit=async (e) => {
       e.preventDefault()
       setError('')
@@ -20,7 +20,6 @@ console.log(email)
       }
   }
   
-  console.log(error)
   return (
     <div>
       <div className='max-w-[400px] mx-auto min-h-[600px] px-4 py-20'>
