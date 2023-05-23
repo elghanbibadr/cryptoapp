@@ -3,6 +3,7 @@ import Wrraper from './Wrraper'
 import Btn from './Btn'
 import { Link } from 'react-router-dom'
 import { auth } from '../firebase'
+import { UserAuth } from '../context/AuthContext'
 import MoonIcon from "../assets/moon-solid.svg"
 
 
@@ -10,6 +11,7 @@ import MoonIcon from "../assets/moon-solid.svg"
 
 
 const Navbar = () => {
+    const {user} =UserAuth();
     return(
 
 <Wrraper >
@@ -23,7 +25,7 @@ const Navbar = () => {
     </div>
     {/* sign in and sign up */}
      <div>
-    {  <>
+    { !user?.email &&   <>
         <Link to="/signUp">
      <Btn text="Sign Up" className="bg-blue-400  text-white" />
      </Link> 
@@ -32,11 +34,13 @@ const Navbar = () => {
      </Link>
     </>  
      }
-
-      {/* { <>
+ 
+      {user?.email  &&  <>
         <button>sign out</button>
+     <Link to="/account">
      <button className='mx-4'>account</button>
-     </>} */}
+     </Link>
+     </>}
  </div> 
     </nav>
    </Wrraper>
