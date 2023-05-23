@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import { Link } from 'react-router-dom'
 import Btn from '../componenet/Btn'
 import { UserAuth } from '../context/AuthContext'
@@ -8,19 +8,19 @@ const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error,setError]=useState('') ;
-
+console.log(email)
     const handleSubmit=async (e) => {
       e.preventDefault()
       setError('')
       try{
        await signIn(email,password)
+       navigator('/account')
       }catch(e){
           setError(e.message)
       }
-      console.log(user?.email)
   }
   
-  
+  console.log(error)
   return (
     <div>
       <div className='max-w-[400px] mx-auto min-h-[600px] px-4 py-20'>
@@ -31,7 +31,7 @@ const SignIn = () => {
           <div className="my-4">
             <label>email</label>
             <div className="my-2 w-full relative rounded-2xl shadow-xl">
-              <input onChange={(e)=>setEmail(e.target)} className="w-full p-2 bg-primary border border-input rounded-2xl" type='email' placeholder='enter your email'/>
+              <input onChange={(e)=>setEmail(e.target.value)} className="w-full p-2 bg-primary border border-input rounded-2xl" type='email' placeholder='enter your email'/>
             </div>
           </div>
           <div className="my-4">
