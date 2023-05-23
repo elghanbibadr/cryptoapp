@@ -17,11 +17,11 @@ const CoinItem = (props) => {
      setSavedCoin(true)
      await updateDoc(coinPath,{
         watchList :arrayUnion({
-            id:coin.id,
-            name:coin.name,
-            image:coin.image,
-            rank:coin.market_cap_rank,
-            symbol:coin.symbol, 
+            id:props.id,
+            name:props.name,
+            image:props.image,
+            rank:props.market_cap_rank,
+            symbol:props.symbol, 
         })
      })
     }else{
@@ -31,7 +31,7 @@ const CoinItem = (props) => {
     return (
         <tr className='text-center border-t-[1px] border-[#ccc] font-medium h-[75px] p-10 '>
 
-            <td className='w-[14px] h-[14px]' >
+            <td onClick={saveCoin} className='w-[14px] h-[14px]' >
             { !savedCoin &&  <img className='h-full w-full' src={starIcon} alt="star icon" /> }     
             { savedCoin &&  <img className='h-full w-full' src={starIconSolide} alt="star icon solid " /> }      
             </td>
