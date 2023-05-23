@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import starIcon from "../assets/star-regular.svg"
+import starIconSolide from "../assets/star-solid.svg"
 import { Link } from 'react-router-dom'
 import { arrayUnion, updateDoc ,doc} from 'firebase/firestore'
 import { db } from '../firebase'
@@ -27,12 +28,12 @@ const CoinItem = (props) => {
         alert("please sign in to save a coin to your watch list")
     }
   }
-
     return (
         <tr className='text-center border-t-[1px] border-[#ccc] font-medium h-[75px] p-10 '>
 
             <td className='w-[14px] h-[14px]' >
-            <img className='h-full w-full' src={starIcon} alt="star icon" /> 
+            { !savedCoin &&  <img className='h-full w-full' src={starIcon} alt="star icon" /> }     
+            { savedCoin &&  <img className='h-full w-full' src={starIconSolide} alt="star icon solid " /> }      
             </td>
             <td className='text-end'>{props.market_cap_rank}</td>
             <td className='flex flex-col  self-center mt-6 items-center md:flex-row md:justify-around ' >
