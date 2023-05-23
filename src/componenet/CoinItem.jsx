@@ -14,7 +14,6 @@ const CoinItem = (props) => {
             <td className='text-end'>{props.market_cap_rank}</td>
             <td className='flex flex-col  self-center mt-6 items-center md:flex-row md:justify-around ' >
                 <Link to={`/coin/${props.id}`}>
-                    {console.log(props.id)}
                     <div className='cursor-pointer'>
                         <img className='h-5 w-5 inline' src={props.image} alt="coin image" />
                         <span> {props.name}</span>

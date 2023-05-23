@@ -2,31 +2,38 @@ import React, { useState } from 'react'
 import { auth ,db} from '../firebase';
 import {setDoc,doc} from "firebase/firestore"
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-
+import { UserAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 const SignUp = () => {
+
     const styles = {
         input: "outline-none py-2 px-1 shadow-lg focus:border-blue-400 rounded-md focus:border-2"
     }
+
+    const {signUp}=UserAuth()
+    console.log(signUp)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [error,setError]=useState('') ;
+    const navigate=useNavigate('')
 
     const handleEmailChange = (e) => setEmail(e.target.value)
     const handlePasswordChange = (e) => setPassword(e.target.value)
-    const handleSignUp =  (e) => {
+    const handleSubmit=async (e) => {
         e.preventDefault()
-         createUserWithEmailAndPassword(auth, email, password)
-         setDoc(doc(db,'users',email), {
-            watchList:[],
-         })
-         setDoc
-        setEmail('')
-        setPassword('')
-    };
+        setError('')
+        try{
+         await signUp(email,password)
+        }catch(e){
+            setError(e.message)
+        }
+    }
 
     return (
         <div className='mx-auto w-[30%]'>
             <h2 className='font-bold text-lg my-10'>Sign up</h2>
-            <form onSubmit={handleSignUp} >
+            {error ? <p className='bg-red-300 p-3 my-2'>{error}</p> :null }
+            <form onSubmit={handleSubmit} >
                 <div className='flex flex-col'>
                     <label  htmlFor='email'>Email</label>
                     <input id="email"
