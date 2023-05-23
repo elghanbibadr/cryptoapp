@@ -1,6 +1,7 @@
 import Navbar from './componenet/Navbar'
 import { Routes,Route } from 'react-router-dom'
 import SignUp from './routes/SignUp'
+import SignIn from './routes/SignIn'
 import Footer from './componenet/Footer'
 import CoinDetail from './routes/CoinDetail'
 import Home from './routes/Home'
@@ -14,6 +15,7 @@ const App = () => {
       <Route path='/' element={<Home />} />
       <Route path="/coin/:id" element={<CoinDetail/>}/>
       <Route path='/signUp' element={<SignUp />} />
+      <Route path='/signIn' element={<SignIn />} />
     </Routes>
     </main>
     <Footer/>
