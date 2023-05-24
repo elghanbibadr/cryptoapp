@@ -4,7 +4,7 @@ import Btn from '../componenet/Btn'
 import { UserAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 import closeIcon from "../assets/x-solid.svg"
-import { doc } from 'firebase/firestore'
+import { doc, updateDoc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { onSnapshot } from 'firebase/firestore'
 
@@ -28,6 +28,20 @@ onSnapshot(doc(db , 'users' ,`${user?.email}`) , (doc) => {
 })
   },[user?.email])
 
+  const coinPath=doc(db,'users' , `${user?.email}`)
+
+  const deleteCoin=async (passedId) => {
+    try {
+      const result =watchListCoins.filter ((item) => item.id !==passedId)
+      await updateDoc(coinPath , {
+        watchList :result
+      })
+    }
+    catch(e){
+      alert(e.message)
+    }
+  }
+
 console.log(watchListCoins)
   return (
     <>
@@ -41,8 +55,8 @@ console.log(watchListCoins)
       </div>
     </Wrraper>
     <Wrraper className='mt-6 min-h-[200px]'> 
-    {!watchListCoins  ? <> 
       <h2 className='font-bold'>Watch List</h2>
+    {watchListCoins.length === 0  ? <> 
     <p>you don't have any coins saved please save a coin to add it to your watch list . click here to search coin</p>
      </>
      : <table className='w-1/2'>
@@ -56,7 +70,7 @@ console.log(watchListCoins)
           return   <tr className='h-10'>
           <td >{coin?.rank}</td>
           <td> <img className='h-6 w-6 mx-auto' src= {coin?.image} alt="coin image" /> </td>
-          <td className='cursor-pointer'>x</td>
+          <td onClick={() => deleteCoin(coin.id)} className='cursor-pointer'>x</td>
           </tr>
         })}
       </tbody>
