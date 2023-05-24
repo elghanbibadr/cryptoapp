@@ -22,12 +22,12 @@ const Acount = () => {
   }
 
   useEffect(() => {
-onSnapshot(doc(db , 'users' ,`${user.email}`) , (doc) => {
+onSnapshot(doc(db , 'users' ,`${user?.email}`) , (doc) => {
   setWatchListCoins(doc.data()?.watchList)
 })
-  },[])
+  },[user?.email])
 
-
+console.log(watchListCoins)
   return (
     <>
     <Wrraper>
@@ -39,7 +39,7 @@ onSnapshot(doc(db , 'users' ,`${user.email}`) , (doc) => {
              <Btn onClick={handleSignOut} text="Sign out"  className="bg-white shadow-md" />
       </div>
     </Wrraper>
-    <Wrraper className='mt-6 h-[200px]'> 
+    <Wrraper className='mt-6 min-h-[200px]'> 
     {!watchListCoins  ? <> 
       <h2 className='font-bold'>Watch List</h2>
     <p>you don't have any coins saved please save a coin to add it to your watch list . click here to search coin</p>
@@ -51,9 +51,13 @@ onSnapshot(doc(db , 'users' ,`${user.email}`) , (doc) => {
         <th>Remove</th>
       </thead>
       <tbody className='text-center'>
-        <td >{watchListCoins[0].rank}</td>
-        <td> <img className='h-8 w-8 mx-auto' src= {watchListCoins[0].image} alt="coin image" /> </td>
-        <td>1</td>
+        {watchListCoins.map(coin => {
+          return   <tr className='h-10'>
+          <td >{coin?.rank}</td>
+          <td> <img className='h-6 w-6 mx-auto' src= {coin?.image} alt="coin image" /> </td>
+          <td>1</td>
+          </tr>
+        })}
       </tbody>
      </table>
      
