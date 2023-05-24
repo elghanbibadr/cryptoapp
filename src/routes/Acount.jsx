@@ -3,6 +3,7 @@ import Wrraper from '../componenet/Wrraper'
 import Btn from '../componenet/Btn'
 import { UserAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import closeIcon from "../assets/x-solid.svg"
 import { doc } from 'firebase/firestore'
 import { db } from '../firebase'
 import { onSnapshot } from 'firebase/firestore'
@@ -55,7 +56,7 @@ console.log(watchListCoins)
           return   <tr className='h-10'>
           <td >{coin?.rank}</td>
           <td> <img className='h-6 w-6 mx-auto' src= {coin?.image} alt="coin image" /> </td>
-          <td>1</td>
+          <td className='cursor-pointer'>x</td>
           </tr>
         })}
       </tbody>
