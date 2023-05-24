@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Wrraper from '../componenet/Wrraper'
 import Btn from '../componenet/Btn'
 import { UserAuth } from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
+import { doc } from 'firebase/firestore'
+import { db } from '../firebase'
+import { onSnapshot } from 'firebase/firestore'
 
 const Acount = () => {
   const  {user,logout} =UserAuth()
+  const [watchListCoins,setWatchListCoins] =useState([])
   const navigate=useNavigate()
 
   const handleSignOut=async () => {
@@ -15,9 +19,15 @@ const Acount = () => {
     }catch(e){
   
     }
-
   }
-  console.log(user)
+
+  useEffect(() => {
+onSnapshot(doc(db , 'users' ,`${user.email}`) , (doc) => {
+  setWatchListCoins(doc.data()?.watchList)
+})
+  },[])
+
+
   return (
     <>
     <Wrraper>
@@ -30,8 +40,25 @@ const Acount = () => {
       </div>
     </Wrraper>
     <Wrraper className='mt-6 h-[200px]'> 
-    <h2 className='font-bold'>Watch List</h2>
+    {!watchListCoins  ? <> 
+      <h2 className='font-bold'>Watch List</h2>
     <p>you don't have any coins saved please save a coin to add it to your watch list . click here to search coin</p>
+     </>
+     : <table className='w-1/2'>
+      <thead>
+        <th>Rank #</th>
+        <th>Coin</th>
+        <th>Remove</th>
+      </thead>
+      <tbody className='text-center'>
+        <td >{watchListCoins[0].rank}</td>
+        <td> <img className='h-8 w-8 mx-auto' src= {watchListCoins[0].image} alt="coin image" /> </td>
+        <td>1</td>
+      </tbody>
+     </table>
+     
+    }
+    
     </Wrraper>
   
     </>
